@@ -1,7 +1,7 @@
 # Backend Development (Node.js)
 
 ##  Overview
-This repository contains my backend development learning and projects using Node.js.
+This repository contains my backend development learning and projects using Node.js with Express
 
 ##  Features Implemented
 - Basic HTTP server
