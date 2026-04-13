@@ -19,3 +19,6 @@ Content-Type: application/json
 ### Deletion of a user
 
 DELETE http://localhost:8080/api/data
+
+### Handle a request to the hompage
+GET  http://localhost:8080
