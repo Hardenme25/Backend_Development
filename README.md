@@ -1,26 +1,42 @@
-# Backend Development (Node.js)
+# Backend Development Projects
 
-##  Overview
-This repository contains my backend development learning and projects using Node.js with Express
+## Overview
+This repository contains my backend development projects and learning progress using Node.js and modern backend technologies.
 
-##  Features Implemented
-- Basic HTTP server
-- POST request handling
-- Data storage in memory
-- API endpoints for user data
-- GET request handling
-- DELETE request handling
+---
 
-##  Technologies Used
+## Projects
+
+### Project 1: Basic REST API
+- Built a simple backend server
+- Implemented GET and POST endpoints
+- Handled basic data storage
+
+---
+
+### Project 2: Full Stack Todo App (In Progress)
+- Node.js + Express backend
+- SQLite database integration
+- JWT authentication
+- Password hashing using bcrypt
+
+---
+
+## Technologies Used
 - Node.js
-- Express 
-- REST Client
+- Express
+- SQLite
+- JWT (Authentication)
+- bcrypt (Password hashing)
 
-##  Project Structure
-- lessons/ → project-based learning
-- project/ → combined backend project
+---
 
-## How to Run
-```bash
-npm install
-node server.js
+## Structure of the Projects
+- project-1/ → Basic backend API
+- project-2/ → Full stack todo application
+- lessons/ → Practice and experiments
+
+---
+
+## 🎯 Goal
+To become a top 1% backend developer by building real-world backend systems and continuously improving code quality intergrated with AI
