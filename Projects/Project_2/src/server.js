@@ -2,6 +2,8 @@
 import express from "express";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
+import router1 from "./Routes/authroutes.js";
+import router from "./Routes/todo-addroutes.js";
 
 // Create an instance for that imported express framework
 const app = express();
@@ -18,8 +20,12 @@ const __dirname = dirname(__filename);
 // Relate the public directory to the current directory
 app.use(express.static(path.join(__dirname,"../Public")));
 
-// Enable our app handle json files
+// Enable our app to parse json data in the request body
 app.use(express.json());
+
+// Using the Routes instance
+app.use("/auth", router1);
+app.use("/todos", router);
 
 // Interprete the get request at the root directory
 app.get("/", (req,res) => {
