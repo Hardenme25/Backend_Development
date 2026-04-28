@@ -1,0 +1,22 @@
+### Imitate a get request at the root directory
+GET http://localhost:3000
+
+### Imitate a post request to the auth directory to create a new user
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "hardenn",
+    "password": "testpasswhite"
+}
+
+
+### Imitate a post request to the auth directory to login a user
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "hardenn",
+    "password": "testpassword"
+}
