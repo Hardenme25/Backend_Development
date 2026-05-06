@@ -1,5 +1,9 @@
 // Import jwt to verify the token
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+
+// Allowing the access of the .env file
+dotenv.config();
 
 // Create a function that authenicates and verifies the request before reaching the backend
 function authmiddleware  (req, res, next) {

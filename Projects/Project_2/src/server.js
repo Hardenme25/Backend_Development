@@ -5,12 +5,16 @@ import { fileURLToPath } from "url";
 import router1 from "./Routes/authroutes.js";
 import router from "./Routes/todo-addroutes.js";
 import authmiddleware from "./middleware/authMiddleware.js";
+import dotenv from "dotenv";
+
+// Allowing the access of the .env file
+dotenv.config();
 
 // Create an instance for that imported express framework
 const app = express();
 
 // Define a port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; 
 
 // Get the filename of the current file
 const __filename = fileURLToPath(import.meta.url);

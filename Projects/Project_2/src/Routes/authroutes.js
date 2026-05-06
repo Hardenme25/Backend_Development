@@ -30,7 +30,7 @@ router1.post("/register", (req,res) => {
             VALUES (?,?)
         `);
         // Add values in the todo
-        const DefaultTodo = "Welcome to your todo list! This is a default todo. You can delete it if you want.";
+        const DefaultTodo = "Welcome to your todo list! :). Create your first todo";
         const add1 = todo.run(add.lastInsertRowid,DefaultTodo);
 
         // Adding the token
@@ -41,11 +41,18 @@ router1.post("/register", (req,res) => {
         res.status(200).json({ token });
 
     } catch (err) {
-        console.log(err.message);
-        res.sendStatus(503);
-     };
+    console.log(err.message);
     
-    });   
+    // If the error is a duplicate username, tell the user
+    if (err.message.includes("UNIQUE constraint failed")) {
+        return res.status(409).json({ message: "Username already exists. Please try another one." });
+    }
+
+    // For any other unexpected errors, use 500
+    res.status(500).json({ message: "Internal Server Error" });
+    };
+
+});   
       
 // Handle a post request at the login
 router1.post("/login", (req,res) => {

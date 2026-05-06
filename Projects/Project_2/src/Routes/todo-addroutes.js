@@ -14,7 +14,7 @@ router.get("/", (req,res) => {
     const todos = getTodos.all(req.userId);
     
     // Now send the todos to the users
-    res.json({todos});
+    res.json(todos);
 });
 
 // Handle a post request for a new todo
