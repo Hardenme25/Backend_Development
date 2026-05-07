@@ -38,5 +38,5 @@ This repository contains my backend development projects and learning progress u
 
 ---
 
-## 🎯 Goal
+##  Goal
 To become a top 1% backend developer by building real-world backend systems and continuously improving code quality intergrated with AI
