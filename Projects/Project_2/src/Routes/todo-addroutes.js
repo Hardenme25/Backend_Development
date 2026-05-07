@@ -11,10 +11,10 @@ router.get("/", (req,res) => {
         SELECT * FROM todos WHERE user_id = ?    
     `);
     // Get the todos for a specific id
-    const todos = getTodos.all(req.userId);
+    const todo = getTodos.all(req.userId);
     
     // Now send the todos to the users
-    res.json(todos);
+    res.json(todo);
 });
 
 // Handle a post request for a new todo
