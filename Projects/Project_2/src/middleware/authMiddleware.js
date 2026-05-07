@@ -16,13 +16,13 @@ function authmiddleware  (req, res, next) {
     };
 
     // If the token exists proceed to verify
-    jwt.verify(token, process.env.JwT_SECRETKEY, (err,decoded) => {
+    jwt.verify(token, process.env.JwT_SECRETKEY, (err,decode) => {
         // If the verification goes wrong
         if (err) {
             return res.status(402).json({message: "Invalid token."});
         };
         // If the token is valid
-        req.userId = decoded.id;
+        req.userId = decode.id;
         // Now proceed to the destination
         next();
     });
