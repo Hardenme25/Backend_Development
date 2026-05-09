@@ -18,8 +18,18 @@ router.get("/", (req,res) => {
 });
 
 // Handle a post request for a new todo
-router.post("", (req,res) => {
+router.post("/", (req,res) => {
+    // Get the todo data from theh frontend
+    const { task } = req.body;
+    // Prepare  the todos table to insert the data
+    const new_todo = db.prepare(`
+        INSERT INTO todos (user_id, todo) VALUES (?,?)
+    `);
+    // Add the new values to the table
+    new_todo.run(req.user_Id,task);
 
+    // Send a response to the user
+    send.json({ id: new_todo.lastID,task, completed: 0});
 });
 
 // Handle a put request to update a todo
