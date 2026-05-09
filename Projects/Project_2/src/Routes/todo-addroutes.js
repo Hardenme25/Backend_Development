@@ -26,10 +26,10 @@ router.post("/", (req,res) => {
         INSERT INTO todos (user_id, todo) VALUES (?,?)
     `);
     // Add the new values to the table
-    new_todo.run(req.user_Id,task);
+    new_todo.run(req.userId,task);
 
     // Send a response to the user
-    send.json({ id: new_todo.lastID,task, completed: 0});
+    res.json({ id: new_todo.lastID,task, completed: 0});
 });
 
 // Handle a put request to update a todo
