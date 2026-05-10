@@ -24,15 +24,29 @@ Content-Type: application/json
 
 ### Emulate a get request to the todos directory to get all the todos (protected)
 GET http://localhost:3000/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MzMzOTQ3LCJleHAiOjE3Nzg0MjAzNDd9.WP7Zlrq2l8NAwmpxkXvRpZk_4daXP-w3QvlQgXHlfX8
-
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NDI1MjI5LCJleHAiOjE3Nzg1MTE2Mjl9.12GAn6Qq23hSuc-PLttiwOo2fQSir2F_UvuxjYlp5qw
 
 ### Emulate a post request for creating a new todo (protected)
 
 POST http://localhost:3000/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4MzMzOTQ3LCJleHAiOjE3Nzg0MjAzNDd9.WP7Zlrq2l8NAwmpxkXvRpZk_4daXP-w3QvlQgXHlfX8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NDI1MjI5LCJleHAiOjE3Nzg1MTE2Mjl9.12GAn6Qq23hSuc-PLttiwOo2fQSir2F_UvuxjYlp5qw
 Content-Type: application/json
 
 {
     "task": "Go to the gym"
 }
+
+
+### Emulate a put request to update a todo (protected)
+PUT http://localhost:3000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NDI1MjI5LCJleHAiOjE3Nzg1MTE2Mjl9.12GAn6Qq23hSuc-PLttiwOo2fQSir2F_UvuxjYlp5qw
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+
+### Emulate a delete request to delete a  todo
+DELETE http://localhost:3000/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NDI1MjI5LCJleHAiOjE3Nzg1MTE2Mjl9.12GAn6Qq23hSuc-PLttiwOo2fQSir2F_UvuxjYlp5qw
