@@ -8,7 +8,7 @@ Content-Type: application/json
 
 {
     "username": "test@gmail.com",
-    "password": "testpasswhite"
+    "password": "123123123"
 }
 
 
@@ -18,18 +18,18 @@ Content-Type: application/json
 
 {
     "username": "test@gmail.com",
-    "password": "testpasswhite"
+    "password": "123123123"
 }
 
 
 ### Emulate a get request to the todos directory to get all the todos (protected)
 GET http://localhost:3000/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NTAyOTQ0LCJleHAiOjE3Nzg1ODkzNDR9.VkWkhUC59btQALUbrgjzrRdQoxYlNPPFukuBOahTzrE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NTA4MDk1LCJleHAiOjE3Nzg1OTQ0OTV9.H_QDYne7KmLQNp1Ad4_50R9L1m9u6O2D5SmwLufgWvQ
 
 ### Emulate a post request for creating a new todo (protected)
 
 POST http://localhost:3000/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NTAyOTQ0LCJleHAiOjE3Nzg1ODkzNDR9.VkWkhUC59btQALUbrgjzrRdQoxYlNPPFukuBOahTzrE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NTA4MDk1LCJleHAiOjE3Nzg1OTQ0OTV9.H_QDYne7KmLQNp1Ad4_50R9L1m9u6O2D5SmwLufgWvQ
 Content-Type: application/json
 
 {
@@ -39,7 +39,7 @@ Content-Type: application/json
 
 ### Emulate a put request to update a todo (protected)
 PUT http://localhost:3000/todos/2
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NTAyOTQ0LCJleHAiOjE3Nzg1ODkzNDR9.VkWkhUC59btQALUbrgjzrRdQoxYlNPPFukuBOahTzrE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NTA4MDk1LCJleHAiOjE3Nzg1OTQ0OTV9.H_QDYne7KmLQNp1Ad4_50R9L1m9u6O2D5SmwLufgWvQ
 Content-Type: application/json
 
 {
@@ -49,4 +49,4 @@ Content-Type: application/json
 
 ### Emulate a delete request to delete a  todo
 DELETE http://localhost:3000/todos/1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NTAyOTQ0LCJleHAiOjE3Nzg1ODkzNDR9.VkWkhUC59btQALUbrgjzrRdQoxYlNPPFukuBOahTzrE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzc4NTA4MDk1LCJleHAiOjE3Nzg1OTQ0OTV9.H_QDYne7KmLQNp1Ad4_50R9L1m9u6O2D5SmwLufgWvQ
