@@ -24,13 +24,15 @@ router1.post("/register", (req,res) => {
         // Add the Values into the query
         const add = insert.run(username, encrypt);
 
+        // Creating a default todo
+        const DefaultTodo = "Welcome to your todo list! :). Create your first todo";
+
         // Create a default todo
         const todo = db.prepare(`
-            INSERT INTO todos (user_id,todo)
+            INSERT INTO todos (user_id,task)
             VALUES (?,?)
         `);
         // Add values in the todo
-        const DefaultTodo = "Welcome to your todo list! :). Create your first todo";
         const add1 = todo.run(add.lastInsertRowid,DefaultTodo);
 
         // Adding the token
