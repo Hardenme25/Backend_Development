@@ -24,7 +24,7 @@ router.post("/", (req,res) => {
     const { task } = req.body;
     // Prepare  the todos table to insert the data
     const new_todo = db.prepare(`
-        INSERT INTO todos (user_id, todo) VALUES (?,?)
+        INSERT INTO todos (user_id, task) VALUES (?,?)
     `);
     // Add the new values to the table
     const result = new_todo.run(req.userId,task);
